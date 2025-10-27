@@ -637,7 +637,7 @@ impl<'a> BrowsePathItem<'a> {
             Some(e) if e.iter().any(|el| el.target_name.is_null()) => {
                 status = StatusCode::BadBrowseNameInvalid
             }
-            _ => {}
+            _ => (),
         }
 
         Self {
